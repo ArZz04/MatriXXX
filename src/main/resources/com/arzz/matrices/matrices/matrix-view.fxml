@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" spacing="20.0" style="-fx-background-color: #f5f5f5;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.arzz.matrices.matrices.MatrixController">
+   <padding>
+      <Insets bottom="30.0" left="40.0" right="40.0" top="30.0" />
+   </padding>
+
+   <Label text="MATRIX" style="-fx-font-weight: bold; -fx-font-size: 24;">
+      <VBox.margin>
+         <Insets bottom="5.0" />
+      </VBox.margin>
+   </Label>
+
+   <Label graphicTextGap="1.0" text="No puedes ir más allá si no sabes qué es la Matrix" style="-fx-font-style: italic; -fx-font-size: 14;"> </Label>
+
+   <HBox fx:id="mainHBox" alignment="CENTER" spacing="30.0">
+      <VBox.margin>
+         <Insets bottom="20.0" top="10.0" />
+      </VBox.margin>
+
+      <VBox alignment="TOP_CENTER" spacing="10.0" style="-fx-background-color: #e8e8e8; -fx-background-radius: 5;">
+         <padding>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+         </padding>
+         <Label text="INPUT 1" style="-fx-font-weight: bold;">
+            <VBox.margin>
+               <Insets bottom="5.0" />
+            </VBox.margin>
+         </Label>
+         <TextField fx:id="input1Columns" promptText="COLUMNAS" prefWidth="150.0">
+            <VBox.margin>
+               <Insets bottom="8.0" />
+            </VBox.margin>
+         </TextField>
+         <TextField fx:id="input1Rows" promptText="FILAS" prefWidth="150.0" />
+      </VBox>
+
+      <VBox alignment="TOP_CENTER" spacing="10.0" style="-fx-background-color: #e8e8e8; -fx-background-radius: 5;">
+         <padding>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+         </padding>
+         <Label text="INPUT 2" style="-fx-font-weight: bold;">
+            <VBox.margin>
+               <Insets bottom="5.0" />
+            </VBox.margin>
+         </Label>
+         <TextField fx:id="input2Columns" promptText="COLUMNAS" prefWidth="150.0">
+            <VBox.margin>
+               <Insets bottom="8.0" />
+            </VBox.margin>
+         </TextField>
+         <TextField fx:id="input2Rows" promptText="FILAS" prefWidth="150.0" />
+      </VBox>
+
+      <VBox alignment="TOP_CENTER" spacing="10.0" style="-fx-background-color: #e8e8e8; -fx-background-radius: 5;">
+         <padding>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+         </padding>
+         <Label text="OUTPUT" style="-fx-font-weight: bold;">
+            <VBox.margin>
+               <Insets bottom="5.0" />
+            </VBox.margin>
+         </Label>
+         <MenuButton fx:id="operationMenuButton" mnemonicParsing="false" prefWidth="150.0" text="SELECCIONE OPERACION">
+            <items>
+               <MenuItem fx:id="sumItem" mnemonicParsing="false" text="SUMA" onAction="#handleOperationSelect" />
+               <MenuItem fx:id="subtractItem" mnemonicParsing="false" text="RESTA" onAction="#handleOperationSelect" />
+               <MenuItem fx:id="multiplyItem" mnemonicParsing="false" text="MULTIPLICACION" onAction="#handleOperationSelect" />
+               <MenuItem fx:id="divideItem" mnemonicParsing="false" text="DIVISION" onAction="#handleOperationSelect" />
+            </items>
+         </MenuButton>
+         <Button fx:id="generateButton" mnemonicParsing="false" text="GENERAR" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-weight: bold;" prefWidth="150.0" prefHeight="40.0" onAction="#handleGenerate">
+            <padding>
+               <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+            </padding>
+         </Button>
+      </VBox>
+   </HBox>
+
+   <Label text="El amor es lo único que somos capaces de percibir que trasciende las dimensiones del tiempo y del espacio" textAlignment="CENTER" wrapText="true" style="-fx-font-style: italic; -fx-font-size: 14;">
+      <VBox.margin>
+         <Insets top="10.0" />
+      </VBox.margin>
+   </Label>
+</VBox>
